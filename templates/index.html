@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria's Azure | Nordic Precision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --finnish-blue: #003580;
+            --forest-green: #1a2f23;
+            --snow: #f9f9f9;
+            --slate: #2d3436;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05070a;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--snow);
+            overflow: hidden;
+        }
+
+        /* Subtle Aurora Borealis Animation */
+        .aurora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% -20%, #1e3c72, #2a5298, #05070a);
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .aurora-glow {
+            position: absolute;
+            top: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(0, 255, 150, 0.05), 
+                rgba(0, 150, 255, 0.05), 
+                transparent);
+            animation: moveAurora 15s linear infinite;
+        }
+
+        .container {
+            text-align: left; /* Scandi design often favors asymmetrical or left-aligned layouts */
+            max-width: 500px;
+            padding: 40px;
+            border-left: 2px solid var(--snow); /* Simple, clean line */
+            animation: slideIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .location {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            color: #888;
+        }
+
+        .status-tag {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+
+        .finnish-flag-stripe {
+            width: 40px;
+            height: 4px;
+            background-color: var(--finnish-blue);
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes moveAurora {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0%); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Subtle pulse for the "Live" feeling */
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #00ff96;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            box-shadow: 0 0 10px #00ff96;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora">
+        <div class="aurora-glow"></div>
+    </div>
+
+    <div class="container">
+        <div class="finnish-flag-stripe"></div>
+        <div class="location">Helsinki Region / Azure</div>
+        <h1>Maria's<br>Server.</h1>
+        
+        <div class="status-tag">
+            <span class="dot"></span> Systems Online
+        </div>
+        
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; margin-top: 40px; color: #aaa;">
+            Simplicity is the ultimate sophistication.
+        </p>
+    </div>
+</body>
+</html>
