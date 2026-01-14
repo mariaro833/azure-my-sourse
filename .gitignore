@@ -1,0 +1,5 @@
+.venv
+env
+.lock
+CACHEDIR.TAG
+pyenv*
