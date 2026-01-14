@@ -1,0 +1,7 @@
+# Create startup.txt
+echo "gunicorn --bind=0.0.0.0:8000 --timeout 600 my_app:app" > startup.txt
+
+# Push to GitHub
+git add startup.txt
+git commit -m "Add startup command"
+git push
